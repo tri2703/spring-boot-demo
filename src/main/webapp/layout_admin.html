@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <!-- Head content goes here -->
+</head>
+<body>
+    <header class="row">
+        <div class="col">
+            <div th:replace="~{admin/fragments/header :: header}"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Navigation section, uncomment if needed -->
+        <nav class="row">
+            <div class="col">
+                <div th:replace="~{admin/fragments/nav :: nav}"></div>
+            </div>
+        </nav>
+  
+        
+        <section class="row mt-4">
+            <div class="col mt-5 mb-5">
+                <div layout:fragment="content"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="row">
+        <div class="col">
+            <div th:replace="~{admin/fragments/footer :: footer}"></div>
+        </div>
+    </footer>
+</body>
+<span
+th:text="#{iotstar.message.hello}"></span>
+<a href="?language=en">English</a>|
+<a href="?language=vi_VN">Viet Nam</a>|
+</html>
